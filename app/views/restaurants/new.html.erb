@@ -1,0 +1,11 @@
+<h2>Add a new Restaurant</h2>
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"], include_blank: "Select a category" %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back', restaurants_path%>
